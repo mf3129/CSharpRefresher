@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
-public class Human 
-{
+
     #region Fields
     private string firstName = "";
     private string lastName = "";
@@ -49,6 +48,8 @@ public class Human
     }
     #endregion
 
+
+
     #region Constructors
     public Human()
     {}
@@ -61,12 +62,16 @@ public class Human
     }
     #endregion
 
+
+
     #region MethodOverrides
     public override string ToString()
     {
         return firstName + " " + lastName + " " + age + " Lefthand -> " + hasLeftHand + " Righthand ->" + hasRightHand;
     }
     #endregion
+
+
 
     #region Methods
 
@@ -87,5 +92,9 @@ public class Human
         return firstName.Length + lastName.Length;
     }
     #endregion
-}
+
+    // private bool IsFullNameCorrect() 
+    // {
+    //     return false; 
+    // }
 }
