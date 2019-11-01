@@ -1,55 +1,68 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Video1 : MonoBehaviour
 {
+    //int
+    //decimal
+    //float
+    //string
+    //object
 
     int age = 25;
     string fullName = "John Doe";
-    decimal weight = 180.5M; //The M tells it is a decimal type
-    float position = 1000.000002f;
+    decimal weight = 180.5M; //M stands for decimal type
+    float position = 1000.00000002f;
     
-    
-    
-    
-    // Start is called before the first frame update
+
     void Start()
     {
-        printPersonInformation(100);
+        PrintPersonInformation(100);
         Debug.Log(GetPersonAge());
-        Debug.Log("Get Person Length: " + GetFullNameLength());
+        Debug.Log(GetFullNameLength()); 
+
     }
 
-    void printPersonInformation() {
-        
-        var personAge = 30;
+
+    void PrintPersonInformation()
+    {
+        var personAge = 3333;
         var personName = "John Doe 2";
-        
+
         Debug.Log(personAge);
-        Debug.Log(personName);
+        Debug.Log(personName); 
+
         Debug.Log(age);
         Debug.Log(fullName);
         Debug.Log(weight);
         Debug.Log(position);
-        
-        age = 45;
+
+        age += 20;
         fullName = "John Toner";
-        
+
         Debug.Log(age);
         Debug.Log(fullName);
     }
-    
-    void printPersonInformation(int newAge) {
+
+
+    void PrintPersonInformation(int newAge)
+    {
         age = newAge;
-        printPersonInformation();
+        PrintPersonInformation(); 
     }
-    
-    int GetPersonAge() {
-        return age;
+
+
+    int GetPersonAge()
+    {
+        int updating = 2000;
+        age = updating;
+        return age; 
     }
-    
-    int GetFullNameLength() {
-        return fullName.Length;
+
+    int GetFullNameLength()
+    {
+        return fullName.Length; 
     }
+
 }
