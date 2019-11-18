@@ -25,6 +25,11 @@ public class Player : Human
         this.xboxOneLiveID = xboxOneLiveID;
     }
 
+    public void SetXboxOneLiveID(string newId)
+	{
+		this.xboxOneLiveID = newId; 
+	}
+
 
     public Score getScore() 
     {
