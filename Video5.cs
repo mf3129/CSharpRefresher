@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Systems.Linq; 
+using System.Linq; 
 using UnityEngine;
 
 public class Video5 : MonoBehaviour
@@ -43,25 +43,27 @@ public class Video5 : MonoBehaviour
         Debug.Log("Property FullName: " + FullName);
 
 
-        //Linq Examples and lamdas
-        List<Player> players = new List<Player> {
-        	new Player("John", "Doe", 20, "johndoe@xbox.xom"),
-        	new Player("Steve", "Doe", 20, "stevedoe@xbox.xom"),
-        	new Player("Steve", "Doe", 40, "stevedoe@xbox.xom"),
-        	new Player("Jason", "Doe", 50, "stevedoe@xbox.xom"),
-        	new Player("Luis", "Toner", 60, "stevedoe@xbox.xom")
+        // linq examples and lambdas
+        List<Player> players = new List<Player>
+        {
+            new Player("John","Doe",20,"johndoe@xbox.com"),
+            new Player("Bruny","Toner",20,"bruny@xbox.com"),
+            new Player("Steve","Doe",30,"stevedoe@xbox.com"),
+            new Player("Jason","Doe",40,"jasondoe@xbox.com"),
+            new Player("Luis","Toner",50,"luis@xbox.com"),
+            new Player("Henry","Doe",60,"henry@xbox.com"),
         };
 
-        //linq
+        // linq
         List<Player> playersWithTheAgeOfTwenty = players.Where(p => p.Age == 20).ToList();
-        int playersWithTheAgeOfTwentyCount = players.Count(p => p.Age == 20); 
+        int playersWithTheAgeOfTwentyCount = players.Count(p => p.Age == 20);
         Debug.Log("playersWithTheAgeOfTwentyCount: " + playersWithTheAgeOfTwentyCount);
 
-        Player playersWithTheAgeOfTwenty = players.FirstOrDefault(p => p.Age == 20); 
-        Debug.Log("playersWithTheAgeOfTwentyCount: " + playersWithTheAgeOfTwenty.FirstName); 
+        Player playerWithAgeOfTwenty = players.FirstOrDefault(p => p.Age == 20);
+        Debug.Log("playerWithAgeOfTwenty: " + playerWithAgeOfTwenty.FirstName);
 
-        Player playerWithTheAgeOfTwentyLast = players.LastOrDefault(p => p.Age == 20);
-        Debug.Log("playerWithTheAgeOfTwenty: "+ playerWithTheAgeOfTwentyLast.FirstName);
+        Player playerWithAgeOfTwentyLast = players.LastOrDefault(p => p.Age == 20);
+        Debug.Log("playerWithAgeOfTwenty: " + playerWithAgeOfTwentyLast.FirstName);
     }
 
 public string FullName { get => fullName; set => fullName = value; }
